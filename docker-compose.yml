@@ -1,8 +1,9 @@
 version: "3"
 
 services:
-  develop_kozos_custom:
-    build: ./
+  rust_dev:
+    build: .
+    image: ubuntu:22.04
     volumes:
       - type: bind
         source: ./workspace/
@@ -10,3 +11,5 @@ services:
         read_only: false
     stdin_open: true
     tty: true
+
+
